@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Untitled Document</title>
+        <style>
+       #div {
+        width: 200px;
+        height: 200px;
+        border: 2px black solid;
+       }
+        </style>
+    </head>
+    <body>
+        <div id = "div">
+        </div>
+         <input type="button" value="add Element" onclick="addElem()">
+   
+<script> 
+     function addElem()
+     {
+        var textElem = document.createTextNode("this is simple text");
+        
+        //to add text element as the last child in our body
+
+        // document.body.appendChild(textElem);
+
+        //to add textElem inside the div
+
+        //document.getElementById("div").appendChild(textElem);
+
+        //to add the node before the div element
+
+        document.body.insertBefore(textElem, document.getElementById("div"));
+
+     }
+</script>
+    </body>
+</html>
